@@ -5,13 +5,14 @@ import {Loader} from '../components/Loader'
 import {UsersList} from '../components/UsersList'
 
 export const UsersPage = () => {
+    const {REACT_APP_USER_API_URL} = process.env;
     const [users, setUsers] = useState([])
     const {loading, request} = useHttp()
     const {token} = useContext(AuthContext)
 
     const fetchUsers = useCallback(async () => {
         try {
-            const fetched = await request('/api/v1/users', 'GET', null, {
+            const fetched = await request(REACT_APP_USER_API_URL, 'GET', null, {
                 Authorization: `Bearer ${token}`
             })
             setUsers(fetched)

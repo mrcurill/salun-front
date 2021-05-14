@@ -7,6 +7,7 @@ import {UserCard} from "../components/UserCard";
 
 export const DetailPage = () => {
 
+    const {REACT_APP_USER_API_URL} = process.env;
     const {token} = useContext(AuthContext)
     const {request, loading} = useHttp();
     const [user, setUser] = useState(null);
@@ -14,7 +15,7 @@ export const DetailPage = () => {
 
     const getUser = useCallback(async () => {
         try {
-            const fetched = await request(`/api/v1/users/${userId }`, 'GET', null, {
+            const fetched = await request(`${REACT_APP_USER_API_URL}/${userId}`, 'GET', null, {
                 Authorization: `Bearer ${token}`
             });
             setUser(fetched);

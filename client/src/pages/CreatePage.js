@@ -4,6 +4,7 @@ import {AuthContext} from '../context/AuthContext'
 import {useHistory} from 'react-router-dom'
 
 export const CreatePage = () => {
+    const {REACT_APP_USER_API_URL} = process.env;
     const history = useHistory()
     const auth = useContext(AuthContext)
     const {request} = useHttp()
@@ -16,7 +17,7 @@ export const CreatePage = () => {
     const pressHandler = async event => {
         if(event.key === 'Enter') {
             try {
-                const data = await request('/api/v1/users', 'POST', {username: username}, {
+                const data = await request(REACT_APP_USER_API_URL, 'POST', {username: username}, {
                     Authorization: `Bearer ${auth.token}`
                 })
                 console.log(data)
