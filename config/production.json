@@ -1,5 +1,5 @@
 {
   "port": 80,
-  "jwtSecret": "vladilen youtube mern",
-   "baseUrl": "http://localhost:5000"
+  "jwtSecret": "jwtTest",
+   "baseUrl": "http://salunapp.ru"
 }
