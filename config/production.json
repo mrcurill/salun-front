@@ -1,5 +1,3 @@
 {
-  "port": 80,
-  "jwtSecret": "jwtTest",
-   "baseUrl": "http://salunapp.ru"
+  "port": 80
 }
