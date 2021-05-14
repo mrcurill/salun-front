@@ -42,7 +42,7 @@ export const AuthPage = () => {
     return (
         <div className="row">
             <div className="col s6 offset-s3">
-                <h1>Сократи ссылку</h1>
+                <h1>Не входить</h1>
                 <div className="card blue darken-1">
                     <div className="card-content white-text">
                         <span className="card-title">Авторизация</span>
@@ -84,13 +84,13 @@ export const AuthPage = () => {
                         >
                             Войти
                         </button>
-                        <button
-                            className="btn grey lighten-1 black-text"
-                            onClick={registerHandler}
-                            disabled={loading}
-                        >
-                            Регистрация
-                        </button>
+                        {/*<button*/}
+                        {/*    className="btn grey lighten-1 black-text"*/}
+                        {/*    onClick={registerHandler}*/}
+                        {/*    disabled={loading}*/}
+                        {/*>*/}
+                        {/*    Регистрация*/}
+                        {/*</button>*/}
                     </div>
                 </div>
             </div>
