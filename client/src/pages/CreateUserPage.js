@@ -3,7 +3,7 @@ import {useHttp} from '../hooks/http.hook'
 import {AuthContext} from '../context/AuthContext'
 import {useHistory} from 'react-router-dom'
 
-export const CreatePage = () => {
+export const CreateUserPage = () => {
     const {REACT_APP_USER_API_URL} = process.env;
     const history = useHistory()
     const auth = useContext(AuthContext)

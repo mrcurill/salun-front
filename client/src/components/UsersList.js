@@ -25,8 +25,8 @@ export const UsersList = ({users}) => {
                     <tr key={user.id}>
                         <td>{index+1}</td>
                         <td>{user.username}</td>
-                        <td>{user.username}</td>
-                        <td>{user.username}</td>
+                        <td>{user.lastName}</td>
+                        <td>{user.firstName}</td>
                         <Link to={`/detail/${user.id}`}>Открыть</Link>
                     </tr>
                 )

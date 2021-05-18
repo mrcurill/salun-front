@@ -5,7 +5,7 @@ import {AuthContext} from "../context/AuthContext";
 import {Loader} from "../components/Loader";
 import {UserCard} from "../components/UserCard";
 
-export const DetailPage = () => {
+export const UserDetailPage = () => {
 
     const {REACT_APP_USER_API_URL} = process.env;
     const {token} = useContext(AuthContext)
