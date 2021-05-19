@@ -29,7 +29,6 @@ export const AuthPage = () => {
         try {
             const data = await request(REACT_APP_AUTH_API_URL, 'POST', {...form});
             auth.login(data.token, data.userId);
-            console.log('Data', data);
         } catch (e) {}
     }
 

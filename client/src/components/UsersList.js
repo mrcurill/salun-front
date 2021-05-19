@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom'
 
 export const UsersList = ({users}) => {
 
-    console.log(`users: ${users}`);
-
     if( !users.length )
         return <p className='center'>Пользователей пока нет</p>
 
