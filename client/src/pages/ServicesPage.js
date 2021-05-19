@@ -3,7 +3,7 @@ import {useHttp} from '../hooks/http.hook';
 import {AuthContext} from '../context/AuthContext';
 import {Loader} from '../components/Loader';
 import {UsersList} from '../components/UsersList';
-import {ServiceTypesList} from "../components/ServicetypesList";
+import {ServiceTypeList} from "../components/ServiceTypeList";
 
 export const ServicesPage = () => {
     const {REACT_APP_SERVICE_API_URL} = process.env;
@@ -30,7 +30,7 @@ export const ServicesPage = () => {
 
     return (
         <>
-            {!loading && <ServiceTypesList serviceTypes={services} />}
+            {!loading && <ServiceTypeList serviceTypes={services} />}
         </>
     )
 }
