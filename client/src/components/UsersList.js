@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Avatar from "@material-ui/core/Avatar";
 
 export const UsersList = ({users}) => {
 
@@ -11,6 +12,7 @@ export const UsersList = ({users}) => {
             <thead>
             <tr>
                 <th>№</th>
+                <th>Аватар</th>
                 <th>Логин</th>
                 <th>Фамилия</th>
                 <th>Имя</th>
@@ -22,6 +24,7 @@ export const UsersList = ({users}) => {
                 return (
                     <tr key={user.id}>
                         <td>{index+1}</td>
+                        <td><Avatar alt="Remy Sharp" src={user.avatar} /></td>
                         <td>{user.username}</td>
                         <td>{user.lastName}</td>
                         <td>{user.firstName}</td>

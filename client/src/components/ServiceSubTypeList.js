@@ -10,8 +10,8 @@ export const ServiceSubTypeList = ({serviceSubTypes}) => {
         <div>
             {serviceSubTypes.map((serviceSubType) => {
                 return (
-                    <div>
-                        <h5 className="service-title">{serviceSubType.subType}</h5>
+                    <div style={{padding:'1rem'}}>
+                        <h6 className="service-title">{serviceSubType.subType}</h6>
                         <ServicesList services={serviceSubType.services}/>
                     </div>
                 )
