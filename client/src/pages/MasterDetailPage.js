@@ -3,11 +3,11 @@ import {useParams} from 'react-router-dom';
 import {useHttp} from "../hooks/http.hook";
 import {AuthContext} from "../context/AuthContext";
 import {Loader} from "../components/Loader";
-import {UserCard} from "../components/UserCard";
+import {MasterCard} from "../components/MasterCard";
 
-export const UserDetailPage = () => {
+export const MasterDetailPage = () => {
 
-    const {REACT_APP_USER_API_URL} = process.env;
+    const {REACT_APP_MASTER_API_URL} = process.env;
     const {token} = useContext(AuthContext)
     const {request, loading} = useHttp();
     const [user, setUser] = useState(null);
@@ -15,7 +15,7 @@ export const UserDetailPage = () => {
 
     const getUser = useCallback(async () => {
         try {
-            const fetched = await request(`${REACT_APP_USER_API_URL}/${userId}`, 'GET', null, {
+            const fetched = await request(`${REACT_APP_MASTER_API_URL}/${userId}`, 'GET', null, {
                 Authorization: `Bearer ${token}`
             });
             setUser(fetched);
@@ -32,7 +32,7 @@ export const UserDetailPage = () => {
 
     return (
         <>
-            { !loading && user && <UserCard user={user}/> }
+            { !loading && user && <MasterCard user={user}/> }
         </>
     )
 }

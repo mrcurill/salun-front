@@ -28,7 +28,7 @@ export const UsersList = ({users}) => {
                         <td>{user.username}</td>
                         <td>{user.lastName}</td>
                         <td>{user.firstName}</td>
-                        <Link to={`/detail/${user.id}`}>Открыть</Link>
+                        <Link to={`/users/detail/${user.id}`}>Открыть</Link>
                     </tr>
                 )
             })}

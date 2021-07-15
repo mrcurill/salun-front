@@ -3,7 +3,7 @@ import {Switch, Route, Redirect} from "react-router-dom";
 import {UsersPage} from "./pages/UsersPage";
 import {ClientsPage} from "./pages/ClientsPage";
 import {CreateUserPage} from "./pages/CreateUserPage";
-import {UserDetailPage} from "./pages/UserDetailPage";
+import {MasterDetailPage} from "./pages/MasterDetailPage";
 import {AuthPage} from "./pages/AuthPage";
 import {ServicesPage} from "./pages/ServicesPage";
 
@@ -24,8 +24,8 @@ export const useRoutes = isAuthenticated => {
                 <Route path="/create/user" exact>
                     <CreateUserPage/>
                 </Route>
-                <Route path="/user/detail/:id">
-                    <UserDetailPage/>
+                <Route path="/users/detail/:id">
+                    <MasterDetailPage/>
                 </Route>
                 <Redirect to="services"/>
             </Switch>
